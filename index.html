@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Motion Detection Request Animation Frame</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Motion detection using a webcam.">
+    <meta name="viewport" content="height=device-height,width=device-width,initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <script src="motiontracking.js" defer="defer"></script>
+  </head>
+  <body>
+<header>
+      <h1>My Motion Detector</h1>
+    </header>
+    <section id="videos">
+      <video id="webcam-input" autoplay width="640" height="480"></video>
+      <canvas id="canvas-source" width="640" height="480"></canvas>
+      <canvas id="canvas-blended" width="640" height="480"></canvas>
+    </section>
+<script type="text/javascript" src="mespeak/mespeak.js"></script>   
+ <script>
+meSpeak.loadConfig("mespeak/mespeak_config.json");
+meSpeak.loadVoice("mespeak/voices/en/en.json");
+meSpeak.speak('hello world');
+var exec = require('child_process').exec;
+function puts(error, stdout, stderr) { console.log(stdout) }
+// Run eject verbosely, with the -T option to toggle the tray's state (i.e. close it if it's already open)
+exec("eject -Tv", puts);
+    </script>
+  </body>
+</html>
